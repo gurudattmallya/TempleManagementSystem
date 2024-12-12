@@ -1,0 +1,252 @@
+/* Global styles with Hindu traditional colors and improved animations */
+:root {
+    --color-kumkum: #ff4d4d;
+    --color-saffron: #ff9933;
+    --color-turmeric: #ffc107;
+    --color-sacred-ash: #f5f5f5;
+    --color-sandalwood: #cd9b5a;
+    --color-holy-basil: #2e7d32;
+    --color-lotus: #e91e63;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+  }
+  
+  @keyframes divinePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes sacredGlow {
+    0% { box-shadow: 0 0 5px var(--color-turmeric); }
+    50% { box-shadow: 0 0 20px var(--color-saffron); }
+    100% { box-shadow: 0 0 5px var(--color-turmeric); }
+  }
+  
+  @keyframes omSymbolFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  body {
+    background: linear-gradient(135deg, var(--color-sacred-ash), var(--color-saffron) 50%, var(--color-kumkum));
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  body::before {
+    content: "ॐ";
+    position: fixed;
+    font-size: 200px;
+    opacity: 0.1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: omSymbolFloat 6s ease-in-out infinite;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Gelasio', 'Merriweather', serif;
+    color: var(--color-sandalwood);
+    position: relative;
+  }
+  
+  h1::after, h2::after {
+    content: '';
+    display: block;
+    width: 30%;
+    height: 3px;
+    background: linear-gradient(to right, var(--color-kumkum), transparent);
+    margin-top: 5px;
+  }
+  
+  /* Enhanced button styles */
+  button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, var(--color-saffron), var(--color-kumkum));
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+  }
+  
+  button:hover::before {
+    left: 100%;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 153, 51, 0.4);
+  }
+  
+  /* Form styling with traditional elements */
+  form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(205, 155, 90, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    animation: sacredGlow 3s infinite;
+  }
+  
+  form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--color-kumkum), var(--color-saffron), var(--color-turmeric));
+    border-radius: 15px 15px 0 0;
+  }
+  
+  input {
+    width: 85%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: var(--color-sacred-ash);
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: var(--color-saffron);
+    box-shadow: 0 0 10px rgba(255, 153, 51, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  /* Enhanced navbar with traditional elements */
+  .navbar {
+    background: linear-gradient(to right, var(--color-kumkum), var(--color-saffron));
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-turmeric), var(--color-sandalwood), var(--color-turmeric));
+  }
+  
+  .navbar a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .navbar a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  /* Login container with enhanced animations */
+  .login-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--color-kumkum), var(--color-saffron), var(--color-turmeric));
+  }
+  
+  /* Footer with traditional design */
+  footer {
+    background: linear-gradient(to right, var(--color-kumkum), var(--color-saffron));
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    width: 100%;
+    position: relative;
+  }
+  
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-turmeric), var(--color-sandalwood), var(--color-turmeric));
+  }
+  
+  /* Enhanced page transitions */
+  .page {
+    animation: fadeIn 1s ease-in-out, divinePulse 2s ease-in-out;
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    body::before {
+      font-size: 150px;
+    }
+    
+    .navbar {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    form {
+      padding: 20px;
+    }
+    
+    input {
+      width: 90%;
+    }
+  }
